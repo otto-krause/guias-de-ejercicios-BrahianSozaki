@@ -21,5 +21,14 @@ namespace Programas
             return lado == lado1 && lado1 == lado2;
         }
 
+        public bool EsTrianguloRectangulo(){
+
+            int hipotenusa = lado2*lado2;
+            int ladosAlCuadrado;
+            ladosAlCuadrado += (lado*lado) + (lado1*lado1);
+            return hipotenusa == ladosAlCuadrado;
+
+        }
+
     }
 }

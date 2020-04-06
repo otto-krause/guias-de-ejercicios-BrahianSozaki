@@ -18,18 +18,20 @@ namespace Programas
             Triangulo triangulo = new Triangulo(lado,lado1,lado2);
 
             if (triangulo.EsEscaleno()){
-                Console.WriteLine("Es escaleno\n");
+                Console.WriteLine("Es un triangulo escaleno\n");
             }
 
             if (triangulo.EsIsosceles()){
-                Console.WriteLine("Es Isosceles\n");
+                Console.WriteLine("Es un triangulo Isosceles\n");
             }
             
             if (triangulo.EsEquilatero()){
-                Console.WriteLine("Es equilatero\n");
+                Console.WriteLine("Es un triangulo equilatero\n");
             }
 
-            
+            if (triangulo.EsTrianguloRectangulo()){
+                Console.WriteLine("Es un triangulo rectangulo");
+            }
 
         }
     }
