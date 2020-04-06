@@ -1,12 +1,32 @@
 ﻿using System;
 
-namespace E4
+namespace Programas
 {
     class Program
-    {
+    {  
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            Gatito umbra = new Gatito ("Umbra", true, 100);
+
+            Console.WriteLine(umbra.Nombre());
+
+            if(umbra.EstaVacunado()){
+                Console.WriteLine("Esta vacunado");
+            }else{
+                Console.WriteLine("No esta vacunado");
+            }
+
+            umbra.jugar(5);
+            umbra.Comer();
+
+            if(umbra.estaSaludable()){
+                Console.WriteLine("Esta saludable");
+            }else{
+                Console.WriteLine("No esta saludable");
+            }
+
         }
     }
 }
