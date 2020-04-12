@@ -1,3 +1,5 @@
+using System;
+
 namespace Programas
 {
     public class Triangulo
@@ -23,9 +25,10 @@ namespace Programas
 
         public bool EsTrianguloRectangulo(){
 
-            int hipotenusa = lado2*lado2;
-            int ladosAlCuadrado;
-            ladosAlCuadrado += (lado*lado) + (lado1*lado1);
+            double hipotenusa = lado2*lado2;
+            double ladosAlCuadrado = (lado*lado) + (lado1*lado1);
+            //Convert.ToInt32(hipotenusa);
+            Console.WriteLine(ladosAlCuadrado+" "+hipotenusa);
             return hipotenusa == ladosAlCuadrado;
 
         }
