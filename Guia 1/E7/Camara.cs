@@ -1,3 +1,5 @@
+using System;
+
 namespace Programas
 {
     public class Camara
@@ -20,7 +22,8 @@ namespace Programas
         }
         public int PesoTotalDeFotos(){
             
-            int totalMB = pesoPorFoto() / 6;
+            int totalMB = pesoPorFoto() / 1000000;
+            int totalPeso = totalMB * cantidadDeFotos;
             return totalMB;
         
         }
