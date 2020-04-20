@@ -27,8 +27,6 @@ namespace Programas
 
             double hipotenusa = lado2*lado2;
             double ladosAlCuadrado = (lado*lado) + (lado1*lado1);
-            //Convert.ToInt32(hipotenusa);
-            Console.WriteLine(ladosAlCuadrado+" "+hipotenusa);
             return hipotenusa == ladosAlCuadrado;
 
         }
