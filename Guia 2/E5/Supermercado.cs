@@ -14,5 +14,9 @@ namespace E5
             carritos.Add(c3);
         }
 
+        public int Ganancias (){
+            return 50;
+        }
+
     }
 }
