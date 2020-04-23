@@ -14,6 +14,10 @@ namespace E4
             this.director = director;
         }
 
+        public string getDescripcion(){
+            return "Titulo: " + this.nombre + "\nGenero: " + this.genero + "\nAño: " + this.año + "\nDirector: " + this.director + "\n";
+        }
+
         public string getGenero(){
             return genero;
         }

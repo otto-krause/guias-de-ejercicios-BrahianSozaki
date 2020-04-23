@@ -19,39 +19,39 @@ namespace E4
             peliteca.Add(p5);
         }
 
-        public string Buscador(string busqueda, int caso){
-            string nombres = "No hay peliculas de lo que busca";
+        public List<string> Buscador(string busqueda, int caso){
+            List<string> descripcion = new List<string>();
             switch (caso){
                 case 1:
                     foreach(var i in peliteca){
                         if (i.getGenero() == busqueda){
-                            nombres = i.getNombre();
+                            descripcion.Add(i.getDescripcion());
                         }
                     }
                     break;
                 case 2:
                     foreach(var i in peliteca){
                         if (i.getNombre() == busqueda){
-                            nombres = i.getNombre();
+                            descripcion.Add(i.getDescripcion());
                         }
                     }
                     break;
                 case 3:
                     foreach(var i in peliteca){
                         if (i.getAño() == busqueda){
-                            nombres = i.getNombre();
+                            descripcion.Add(i.getDescripcion());
                         }
                     }
                     break;
                 case 4:
                     foreach(var i in peliteca){
                         if (i.getDirector() == busqueda){
-                            nombres = i.getNombre();
+                            descripcion.Add(i.getDescripcion());
                         }
                     }
                     break;
             }
-            return nombres;
+            return descripcion;
         }
 
         public int getCantidadDePeliculas(){

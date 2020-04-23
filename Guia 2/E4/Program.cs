@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace E4
 {
@@ -18,22 +19,34 @@ namespace E4
                     case 1:
                         Console.WriteLine("Ingrese el genero de la pelicula que busca");
                         busqueda = Console.ReadLine();
-                        Console.WriteLine(peliculas.Buscador(busqueda, opcion));
+                        List<string> ListadoG = peliculas.Buscador(busqueda, opcion);
+                        foreach (var i in ListadoG){
+                            Console.WriteLine(i);
+                        }
                         break;
                     case 2:
                         Console.WriteLine("Ingrese el nombre de la pelicula que busca");
                         busqueda = Console.ReadLine();
-                        Console.WriteLine(peliculas.Buscador(busqueda, opcion));
+                        List<string> ListadoN = peliculas.Buscador(busqueda, opcion);
+                        foreach (var i in ListadoN){
+                            Console.WriteLine(i);
+                        }
                         break;
                     case 3:
                         Console.WriteLine("Ingrese el año de la pelicula que busca");
                         busqueda =Console.ReadLine();
-                        Console.WriteLine(peliculas.Buscador(busqueda, opcion));
+                        List<string> ListadoA = peliculas.Buscador(busqueda, opcion);
+                        foreach (var i in ListadoA){
+                            Console.WriteLine(i);
+                        }
                         break;
                     case 4:
                         Console.WriteLine("Ingrese el nombre y apellido del director de la pelicula que busca");
                         busqueda = Console.ReadLine();
-                        Console.WriteLine(peliculas.Buscador(busqueda, opcion));
+                        List<string> ListadoD = peliculas.Buscador(busqueda, opcion);
+                        foreach (var i in ListadoD){
+                            Console.WriteLine(i);
+                        }
                         break;
                     case 5:
                         Console.WriteLine("La cantidad de peliculas es: " + peliculas.getCantidadDePeliculas());
