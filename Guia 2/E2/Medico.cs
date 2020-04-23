@@ -16,17 +16,16 @@ namespace E2
             this.cantidadDeTurnos = cantidadDeTurnos;
 
         }
-        public bool EstaDisponible(string especialidadPedida){
-
-            if(especialidadPedida == especialidad) return cantidadDeTurnos < 50;
-            return false;
-
+        public bool EstaDisponible(){
+            return cantidadDeTurnos < 50;
         }
 
-        public string Nombre(){
+        public string getEspecialidad(){
+            return especialidad;
+        }
 
+        public string getNombre(){
             return nombre;
-
         }
 
     }

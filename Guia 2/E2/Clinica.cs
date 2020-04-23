@@ -20,22 +20,15 @@ namespace E2
         }
         
         public string DisponibilidadDelMedico(){
-
-            string mensaje;
-
             foreach (var i in medicos){
-
-                if (i.EstaDisponible(especialidadPedida)){
-
-                    mensaje = ("El medico que lo atendera se llama: " + i.Nombre());
-                    return mensaje;
-
+                if(especialidadPedida == i.getEspecialidad()){
+                    if (i.EstaDisponible()){
+                        return "El medico que lo atendera se llama: " + i.getNombre();
+                    }
                 }
 
             }
-
             return "Intente de nuevo mas tarde";
-
         }
 
     }
