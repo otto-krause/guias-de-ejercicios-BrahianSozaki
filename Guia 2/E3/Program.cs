@@ -29,10 +29,11 @@ namespace E3
             if (figurita.apareceEnElAlbum(numeroDeLaFigurita)) Console.WriteLine("La figurita esta en el album");
             else figurita.ingreso(nombre,posicion,pais,numeroDeLaFigurita);
 
-            for (int i = 0; i < 2; i++){
-                count[i] = figurita.DelanterosMedioCampistas(i);
-                if (i == 0) Console.WriteLine("La cantidad de delanteros es: "+ count[i]);
-                else Console.WriteLine("La cantidad de medio campistas es: "+ count [i]);
+            while (posicion != "Salir"){
+                
+                Console.WriteLine("Ingrese \"Delantero\" para saber la cantidad de delanteros\n\"Medio Campista\" para saber la cantidad de medio campsitas\nSi desea salir ingrese \"Salir\"");
+                posicion = Console.ReadLine();
+                if (posicion != "Salir") Console.WriteLine("La cantidad de "+ posicion + " es: "+ figurita.Contador(posicion));
             }
 
             if (figurita.EstaCompleto()) Console.WriteLine("¡¡El album esta completo!!");
