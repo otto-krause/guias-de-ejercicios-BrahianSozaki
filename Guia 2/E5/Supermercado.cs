@@ -4,18 +4,25 @@ namespace E5
 {
     public class Supermercado
     {
+        
         List<Carrito> carritos = new List<Carrito>();
-        public Supermercado (){
+        string producto;
+        int cantidadDelProducto;
+
+        public Supermercado (string producto, int cantidadDelProducto){
+            this.producto = producto;
+            this.cantidadDelProducto = cantidadDelProducto;
+
             Carrito c1 = new Carrito();
             carritos.Add(c1);
-            Carrito c2 = new Carrito();
-            carritos.Add(c2);
-            Carrito c3 = new Carrito();
-            carritos.Add(c3);
         }
 
-        public int Ganancias (){
-            return 50;
+        public int Ganancias(){
+            int precio = 0;
+            foreach (var i in carritos){
+                precio = i.precio(producto);
+            }
+            return precio * cantidadDelProducto;
         }
 
     }
