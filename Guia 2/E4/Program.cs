@@ -19,32 +19,28 @@ namespace E4
                     case 1:
                         Console.WriteLine("Ingrese el genero de la pelicula que busca");
                         busqueda = Console.ReadLine();
-                        List<string> ListadoG = peliculas.Buscador(busqueda, opcion);
-                        foreach (var i in ListadoG){
+                        foreach (var i in peliculas.Buscador(busqueda, opcion)){
                             Console.WriteLine(i);
                         }
                         break;
                     case 2:
                         Console.WriteLine("Ingrese el nombre de la pelicula que busca");
                         busqueda = Console.ReadLine();
-                        List<string> ListadoN = peliculas.Buscador(busqueda, opcion);
-                        foreach (var i in ListadoN){
+                        foreach (var i in peliculas.Buscador(busqueda, opcion)){
                             Console.WriteLine(i);
                         }
                         break;
                     case 3:
                         Console.WriteLine("Ingrese el año de la pelicula que busca");
                         busqueda =Console.ReadLine();
-                        List<string> ListadoA = peliculas.Buscador(busqueda, opcion);
-                        foreach (var i in ListadoA){
+                        foreach (var i in peliculas.Buscador(busqueda, opcion)){
                             Console.WriteLine(i);
                         }
                         break;
                     case 4:
                         Console.WriteLine("Ingrese el nombre y apellido del director de la pelicula que busca");
                         busqueda = Console.ReadLine();
-                        List<string> ListadoD = peliculas.Buscador(busqueda, opcion);
-                        foreach (var i in ListadoD){
+                        foreach (var i in peliculas.Buscador(busqueda, opcion)){
                             Console.WriteLine(i);
                         }
                         break;
