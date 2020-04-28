@@ -5,6 +5,7 @@ namespace E6
     public class Juego
     {
         private string titulo;
+        public string Titulo { get => titulo; }
         private string genero;
         public string Genero { get => genero; }
 
@@ -18,9 +19,16 @@ namespace E6
             reseña.Add(r);
         }
 
-        public int getEstrellas(){
-            foreach (var i in reseña)
-                return i.Estrellas;
+        public int getEstrellas(List<string> titulos){//Ver porque no me permite hacer que la lista pertenezca a juegos y funcione correctamente cargando todos los titulos.
+            int count = 0;
+            foreach (var i in reseña){
+                foreach (var j in titulos){
+                    if (titulo == j){
+                        count++;
+                    }
+                }
+                return i.Estrellas / count++;
+            }
 
             return 0;
         }
