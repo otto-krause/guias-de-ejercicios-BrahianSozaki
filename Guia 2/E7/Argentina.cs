@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System;
 namespace E7
 {
     public class Argentina
@@ -18,20 +17,17 @@ namespace E7
         public void bajarElPrecioDelPetroleo(){
             foreach (var i in alfajores){
                 i.Aumentos(1);
-                Console.WriteLine(i.Precio);
             }
         }
 
         public void milllaiHablaPorTv(){
             foreach (var i in alfajores){
                 i.Aumentos(2);
-                Console.WriteLine(i.Precio);
             }
         }
         public void CoronaVairas(){
             foreach (var i in alfajores){
                 i.Aumentos(3);
-                Console.WriteLine(i.Precio);
             }
         }
 
