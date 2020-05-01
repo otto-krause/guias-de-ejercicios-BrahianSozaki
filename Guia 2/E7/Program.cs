@@ -33,11 +33,8 @@ namespace E7
 
                             if(suma > 500 && suma < 1000) Console.WriteLine("Estado: Super Inflacion");
 
-                            else Console.WriteLine("Estado: Hyper Infalcion");
+                            else Console.WriteLine("Estado: Hyper Infalcion\nLa Argentina esta en default");
                             
-                        }
-                        if (suma > 1000){//esto tiene el agregado de ver si solo hay una productora que no se la condicion exacta
-                            Console.WriteLine("La Argentina esta en default");
                         }
                         break;
                 }
