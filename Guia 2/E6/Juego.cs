@@ -15,29 +15,32 @@ namespace E6
         {
             this.titulo = titulo;
             this.genero = genero;
-            Reseñas r = new Reseñas(estrellas, comentario);
-            reseña.Add(r);
+            reseña.Add(new Reseñas(estrellas, comentario));
         }
 
-        public int getEstrellas(List<string> titulos){//Ver porque no me permite hacer que la lista pertenezca a juegos y funcione correctamente cargando todos los titulos.
+        public int getEstrellas(List<string> titulos){
             int count = 0;
+            int acu = 0;
             foreach (var i in reseña){
                 foreach (var j in titulos){
                     if (titulo == j){
                         count++;
+                        acu = i.Estrellas;
                     }
                 }
-                return i.Estrellas / count++;
             }
-
-            return 0;
+            return acu / count++;
         }
 
         public string Descripcion(){
-            foreach (var i in reseña)
-                return "Titulo: " + this.titulo + "\nGenero: " + this.genero + "\nCalificacion: " + i.Estrellas + "\nComentario: " + i.Reseña;
+            int Estrellas = 0;
+            string Reseña = "";
+            foreach (var i in reseña){
+                Estrellas = i.Estrellas;
+                Reseña = i.Reseña;
+            }
 
-            return "No se encontro ningun juego";
+            return "Titulo: " + this.titulo + "\nGenero: " + this.genero + "\nCalificacion: " + Estrellas + "\nComentario: " + Reseña;
         }
 
     }
