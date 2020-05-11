@@ -17,7 +17,8 @@ namespace E5
         public void Entrenamiento(int minutos)
         {
             xBuster += 2*minutos;
-            armadura.Entrenar(xBuster);//Buscar manera de mejorar este metodo ya que su funcionamiento es "erroneo" pero funcional.
+            if (armadura == new FalconArmor()) armadura.Entrenar(minutos);
+            else armadura.Entrenar(xBuster);
         }
         public double Fuerza (){
             return xBuster + armadura.BonificacionDeDaño();

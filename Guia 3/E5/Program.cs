@@ -17,7 +17,8 @@ namespace E5
                     "[1]Fuerza de X\n"+
                     "[2]Entrenar\n"+
                     "[3]Cambiar armadura a la Falcon Armor\n"+
-                    "[4]Cambiar armadura a la Shadow Armor\n");
+                    "[4]Cambiar armadura a la Shadow Armor\n"+
+                    "[5]Salir");
                 opcion = Console.ReadLine();
 
                 switch (opcion){

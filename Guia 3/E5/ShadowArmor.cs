@@ -10,9 +10,9 @@ namespace E5
             this.desgaste = 10;
         }
 
-        public void Entrenar(double xBuster)
+        public void Entrenar(double var)
         {
-            desgaste += xBuster;
+            desgaste += var;
         }
         public double BonificacionDeDaño()
         {

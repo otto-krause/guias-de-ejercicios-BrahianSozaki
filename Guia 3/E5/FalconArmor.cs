@@ -15,11 +15,10 @@ namespace E5
             return (potencia+resistencia)/2;
         }
 
-        public void Entrenar(double xBuster)
+        public void Entrenar(double var)
         {
-            double minutos = (xBuster / 2)-5;
             potencia += 10;
-            if (resistencia >= minutos) resistencia -= minutos;
+            if (resistencia >= var) resistencia -= var;
             else resistencia -= resistencia;
         }
     }
