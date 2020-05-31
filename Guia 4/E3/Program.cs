@@ -49,6 +49,9 @@ namespace E3
                         Console.WriteLine("Ingrese el nombre de la consola en la que quiere jugar y las horas que jugo");
                         nombreDeLaConsola = Console.ReadLine();
                         horasJugadas = Int32.Parse(Console.ReadLine());
+                        foreach (var i in brahian.Consolas){
+                            if (nombreDeLaConsola == i.ToString()) i.jugar(horasJugadas);
+                        }
                         break;
                     default:
                         opcion = "Salir";
