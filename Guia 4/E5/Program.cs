@@ -16,7 +16,9 @@ namespace E5
                 opcion = Console.ReadLine();
                 switch (opcion){
                     case "1":
-                        robot.pensar();
+                        Console.WriteLine("Ingrese que penso");
+                        opcion = Console.ReadLine();
+                        robot.pensar(opcion);
                         break;
                     case "2":
                         Console.WriteLine("Ingrese que estudio");
@@ -24,7 +26,9 @@ namespace E5
                         robot.estudiar(opcion);
                         break;
                     case "3":
-                        humano.pensar();
+                        Console.WriteLine("Ingrese que penso");
+                        opcion = Console.ReadLine();
+                        humano.pensar(opcion);
                         break;
                     case "4":
                         Console.WriteLine("Ingrese que estudio");
@@ -32,7 +36,9 @@ namespace E5
                         humano.estudiar(opcion);
                         break;
                     case "5":
-                        cyborg.pensar();
+                        Console.WriteLine("Ingrese que penso");
+                        opcion = Console.ReadLine();
+                        cyborg.pensar(opcion);
                         break;
                     case "6":
                         Console.WriteLine("Ingrese que estudio");

@@ -6,11 +6,10 @@ namespace E5
         public Humano (int inteligencia) : base(inteligencia)
         {
         }
-        public override void pensar()
+        public override void pensar(string tema)
         {
-            string Pensamiento = "Robotica";
             for (int i = conocimientos.Count; i == conocimientos.Count-5; i--){
-                if(conocimientos[i] == Pensamiento) inteligencia += 5;
+                if(conocimientos[i] == tema) inteligencia += 5;
             }
         }
         public override void estudiar(string conocimientoNuevo)

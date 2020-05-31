@@ -5,7 +5,7 @@ namespace E5
         public Cyborg  (int inteligencia) : base(inteligencia)
         {
         }
-        public override void pensar()
+        public override void pensar(string tema)
         {
             inteligencia += conocimientos.Count;
         }
