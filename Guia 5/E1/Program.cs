@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace E1
 {
@@ -6,7 +8,27 @@ namespace E1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<Persona> personas = new List<Persona>();
+            Persona p1 = new Persona(35, "Juan", "Perez");
+            Persona p2 = new Persona(16, "Juan", "Ludenberg");
+            Persona p3 = new Persona(60, "Carlos", "Perez");
+            personas.Add(p1);
+            personas.Add(p2);
+            personas.Add(p3);
+
+            List<Persona> mayoresDeEdad = personas.Where(persona => persona.Edad >= 18).ToList();
+            Console.WriteLine("Mayores de Edad:\n");
+            foreach (var i in mayoresDeEdad) Console.WriteLine("Nombre: " + i.Nombre + "\nApellido: " + i.Apellido + "\nEdad: " + i.Edad);
+
+            List<Persona> Juanes = personas.Where(personas => personas.Nombre == "Juan").ToList();
+            Console.WriteLine("\nLos Juanes:\n");
+            foreach (var i in Juanes) Console.WriteLine("Nombre: " + i.Nombre + "\nApellido: " + i.Apellido + "\nEdad: " + i.Edad);
+
+            List<Persona> Perez = personas.Where(personas => personas.Apellido == "Perez").ToList();
+            Console.WriteLine("\nLos Perez:\n");
+            foreach (var i in Perez) Console.WriteLine("Nombre: " + i.Nombre + "\nApellido: " + i.Apellido + "\nEdad: " + i.Edad);
+
+
         }
     }
 }
