@@ -18,15 +18,15 @@ namespace E1
 
             List<Persona> mayoresDeEdad = personas.Where(persona => persona.Edad >= 18).ToList();
             Console.WriteLine("Mayores de Edad:\n");
-            foreach (var i in mayoresDeEdad) Console.WriteLine("Nombre: " + i.Nombre + "\nApellido: " + i.Apellido + "\nEdad: " + i.Edad);
+            mayoresDeEdad.ForEach(persona => Console.WriteLine("Nombre: " + persona.Nombre + "\nApellido: " + persona.Apellido + "\nEdad: " + persona.Edad));
 
             List<Persona> Juanes = personas.Where(personas => personas.Nombre == "Juan").ToList();
             Console.WriteLine("\nLos Juanes:\n");
-            foreach (var i in Juanes) Console.WriteLine("Nombre: " + i.Nombre + "\nApellido: " + i.Apellido + "\nEdad: " + i.Edad);
+            Juanes.ForEach(persona => Console.WriteLine("Nombre: " + persona.Nombre + "\nApellido: " + persona.Apellido + "\nEdad: " + persona.Edad));
 
             List<Persona> Perez = personas.Where(personas => personas.Apellido == "Perez").ToList();
             Console.WriteLine("\nLos Perez:\n");
-            foreach (var i in Perez) Console.WriteLine("Nombre: " + i.Nombre + "\nApellido: " + i.Apellido + "\nEdad: " + i.Edad);
+            Perez.ForEach(persona => Console.WriteLine("Nombre: " + persona.Nombre + "\nApellido: " + persona.Apellido + "\nEdad: " + persona.Edad));
 
 
         }
