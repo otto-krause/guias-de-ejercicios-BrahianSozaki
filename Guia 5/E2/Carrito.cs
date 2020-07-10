@@ -1,11 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
-namespace E5
+namespace E2
 {
     public class Carrito
     {
-        List <Producto> productos = new List<Producto>();
+        List <Producto> productos;
         public Carrito (){
+            productos = new List<Producto>();
             Producto p1 = new Producto("Leche la Martona", 44);
             Producto p2 = new Producto("Surtidas", 60);
             productos.Add(p1);

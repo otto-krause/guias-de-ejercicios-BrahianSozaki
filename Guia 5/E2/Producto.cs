@@ -1,4 +1,4 @@
-namespace E5
+namespace E2
 {
     public class Producto
     {
