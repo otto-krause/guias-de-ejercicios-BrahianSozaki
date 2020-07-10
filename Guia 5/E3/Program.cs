@@ -40,9 +40,9 @@ namespace E3
             List<string> Dioses = new List<string>();
             caballeros.ForEach(i => Dioses.Add(i.DiosAlQueApoya));
 
-            var DiosesSinRepetir = Dioses.Distinct();
+            Dioses = Dioses.Distinct().ToList();
             
-            foreach(var i in DiosesSinRepetir) Console.WriteLine(i);
+            Dioses.ForEach(i => Console.WriteLine(i));
 
             //Signos que empiezan con C
             Console.WriteLine("\nSignos que empiezan con 'C'\n");
