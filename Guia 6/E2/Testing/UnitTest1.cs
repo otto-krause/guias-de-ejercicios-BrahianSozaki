@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
+using Ejercicio;
 namespace Testing
 {
     public class Tests
@@ -19,6 +20,7 @@ namespace Testing
             receta = new List<Receta>();
             receta.Add(new Receta(ingredientes, 3));
             receta.Add(new Receta(ingredientes, 3));
+            receta.Add(new Receta(ingredientes, 1));
             HarryPostre = new Mago(receta);
         }
 
